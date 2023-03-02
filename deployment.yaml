@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: primuslearning
+  name: githublearning
   labels:
-    app: primuslearning
+    app: githublearning
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: primuslearning
+      app: githublearning
   template:
     metadata:
       labels:
-        app: primuslearning
+        app: githublearning
     spec:
       containers:
-        - name: primuslearning
-          image: 274127640471.dkr.ecr.us-east-2.amazonaws.com/primuslearning:1.1
+        - name: githublearning
+          image: 787348883996.dkr.ecr.us-east-2.amazonaws.com/githublearning:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
