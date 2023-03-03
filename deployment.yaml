@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: githublearning
-          image: 787348883996.dkr.ecr.us-east-2.amazonaws.com/githublearning:v1
+          image: 787348883996.dkr.ecr.us-east-2.amazonaws.com/githublearning:IMAGE_TAG
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
