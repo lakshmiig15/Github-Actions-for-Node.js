@@ -44,5 +44,5 @@ jobs:
     - name: Deploy to EKS
       run: |
         echo ${BUILD_TAG}
-        sed -e 's|IMAGE_TAG|${BUILD_TAG}|g'|cat| deployment.yaml | kubectl apply -f -
+        sed -e "s|IMAGE_TAG|${BUILD_TAG}|g" deployment.yaml | kubectl apply -f -
         kubectl apply -f service.yaml
